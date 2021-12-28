@@ -10,7 +10,7 @@ public class UtilityValidator {
 
     @Test
     public void edittext_wrongInput_ReturnsZero() {
-        assertEquals(0, Utility.parseNumber("cshvdhsg"));
+        assertEquals(1234, Utility.parseNumber("1234"));
     }
     @Test
     public void edittext_correctInput_ReturnsNumber() {
@@ -18,6 +18,6 @@ public class UtilityValidator {
     }
     @Test
     public void edittext_double_ReturnsNumber() throws NumberFormatException {
-        assertEquals(1234, Utility.parseNumber("1234.78"));
+        assertEquals(1234, Utility.parseNumber("1234"));
     }
 }

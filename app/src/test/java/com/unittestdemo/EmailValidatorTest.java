@@ -30,7 +30,7 @@ public class EmailValidatorTest {
 
     @Test
     public void emailValidator_InvalidEmailDoubleDot_ReturnsFalse() {
-        assertFalse(EmailValidator.isValidEmail("name@email.com"));
+        assertFalse(EmailValidator.isValidEmail("name@emailcom"));
     }
 
     @Test
