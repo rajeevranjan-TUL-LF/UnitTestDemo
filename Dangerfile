@@ -17,3 +17,6 @@ failure "Please add labels to this PR" if github.pr_labels.empty?
 
 #ENSURE THERE IS A SUMMARY FOR A PR
 failure "Please provide a summary in the Pull Request description" if github.pr_body.length < 5
+
+HIGHLIGHT WITH A CLICKABLE LINK IF A gradle.properties IS CHANGED
+warn "#{github.html_link("gradle.properties")} was edited." if git.modified_files.include? "gradle.properties"
