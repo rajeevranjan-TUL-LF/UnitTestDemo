@@ -13,7 +13,7 @@ fail("fdescribe left in tests") if `grep -r fdescribe specs/ `.length > 1
 fail("fit left in tests") if `grep -r fit specs/ `.length > 1
 
 #ENSURE THAT LABELS HAVE BEEN USED ON THE PR
-failure "Please add labels to this PR" if github.pr_labels.empty?
+warn "Please add labels to this PR" if github.pr_labels.empty?
 
 #ENSURE THERE IS A SUMMARY FOR A PR
 failure "Please provide a summary in the Pull Request description" if github.pr_body.length < 5
