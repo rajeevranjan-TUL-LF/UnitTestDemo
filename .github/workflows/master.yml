@@ -49,14 +49,14 @@ jobs:
           retention-days: 3
 
       - name: upload artefact to App Center
-          uses: wzieba/AppCenter-Github-Action@v1
-          with:
-            appName: rranjan1-tataunistore.com/apps/MP-Android-App
-            token: ${{secrets.APP_CENTER_TOKEN}}
-            group: alpha
-            file: app/build/outputs/apk/debug/app-debug.apk
-            notifyTesters: true
-            debug: true
+        uses: wzieba/AppCenter-Github-Action@v1
+        with:
+          appName: rranjan1-tataunistore.com/apps/MP-Android-App
+          token: ${{secrets.APP_CENTER_TOKEN}}
+          group: alpha
+          file: app/build/outputs/apk/debug/app-debug.apk
+          notifyTesters: true
+          debug: true
 
   releaseDebug:
     name: releaseDebug
